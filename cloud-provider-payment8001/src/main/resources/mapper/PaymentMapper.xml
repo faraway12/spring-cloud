@@ -8,7 +8,7 @@
     </resultMap>
 
     <insert id="add" parameterType="Payment" useGeneratedKeys="true" keyProperty="id">
-        insert into payment(serial) values(#(serial));
+        insert into payment(serial) values(#{serial});
     </insert>
 
     <select id="findById" parameterType="Long" resultMap="BaseResultMap">
