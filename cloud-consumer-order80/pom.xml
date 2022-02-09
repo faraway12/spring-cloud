@@ -12,6 +12,13 @@
     <artifactId>cloud-consumer-order80</artifactId>
 
     <dependencies>
+        <!--引入cloud-commons-api-->
+        <dependency>
+            <groupId>com.study.springcloud</groupId>
+            <artifactId>cloud-commons-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -24,6 +31,7 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
+        <!--不使用数据库-->
 <!--        <dependency>-->
 <!--            <groupId>com.alibaba</groupId>-->
 <!--            <artifactId>druid-spring-boot-starter</artifactId>-->
