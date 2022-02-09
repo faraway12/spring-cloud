@@ -1,0 +1,11 @@
+*/target/
+*/bin/
+*.iml
+*.idea
+.settings/
+.project
+.classpath
+.factorypath
+.flattened-pom.xml
+/.metadata/
+target/
