@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 
 spring:
   application:
@@ -13,7 +13,7 @@ spring:
 
 eureka:
   instance:
-    instance-id: payment8001 #指定服务名称
+    instance-id: payment8002 #指定服务名称
     prefer-ip-address: true #显示ip
   client:
     #true 表示是否注册到注册中心 默认为true
