@@ -12,6 +12,9 @@ spring:
     password: 123456
 
 eureka:
+  instance:
+    instance-id: payment8002 #指定服务名称
+    prefer-ip-address: true #显示ip
   client:
     #true 表示是否注册到注册中心 默认为true
     register-with-eureka: true
