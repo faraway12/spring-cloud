@@ -18,7 +18,8 @@ eureka:
     #true 表示是否从eurekaServer抓取已有的服务信息 默认为true，单点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:7001/eureka
+      #defaultZone: http://localhost:7001/eureka 单机版
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka #集群 备注：实际上只需要写一个地址就可以，多个集群eureka之间会同步注册服务的信息
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
