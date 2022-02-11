@@ -15,6 +15,8 @@ eureka:
   instance:
     instance-id: payment8002 #指定服务名称
     prefer-ip-address: true #显示ip
+    lease-renewal-interval-in-seconds: 1 #向中心发送心跳的时间间隔(默认为30秒)
+    lease-expiration-duration-in-seconds: 2 #服务端未收到心跳的等待时间，超时将删除服务(默认为90秒)
   client:
     #true 表示是否注册到注册中心 默认为true
     register-with-eureka: true
