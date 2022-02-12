@@ -17,6 +17,7 @@
     <module>cloud-eureka-server7002</module>
     <module>cloud-provider-payment8002</module>
       <module>cloud-zookeeper-dockerservcer</module>
+      <module>cloud-provider-payment8003</module>
   </modules>
 
   <!--统一管理jar包版本-->

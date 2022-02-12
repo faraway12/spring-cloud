@@ -17,7 +17,19 @@ Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN�
 
 #### 使用说明
 
-1.  xxxx
+1.  etc/host文件修改
+````
+    # SpringCloud-Eureka
+    127.0.0.1 eureka7001.com
+    127.0.0.1 eureka7002.com
+    127.0.0.1 eureka7003.com
+    
+    # SpringCloud-zookeeper
+    127.0.0.1 zookeeper1.com
+    127.0.0.1 zookeeper2.com
+    127.0.0.1 zookeeper3.com
+````
+
 2.  xxxx
 3.  xxxx
 
