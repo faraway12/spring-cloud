@@ -7,7 +7,6 @@ spring:
   cloud:
     zookeeper:
       connect-string: zookeeper1.com:2181
-
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver

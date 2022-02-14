@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.UUID;
 
 /**
  * <p> Title: PaymentController </p>
@@ -45,6 +46,11 @@ public class PaymentController {
         }else{
             return new CommonResult(444,"未查询到相应记录,serverPort"+serverPort);
         }
+    }
+
+    @GetMapping("/payment/getZk")
+    public CommonResult getZk(){
+        return new CommonResult(200,"spring cloud zookeeper,post:"+serverPort,UUID.randomUUID().toString());
     }
 
 }
