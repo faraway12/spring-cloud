@@ -11,5 +11,18 @@
 
     <artifactId>cloud-provider-payment-consul8004</artifactId>
 
+    <dependencies>
+        <!--引入cloud-commons-provider-payment-->
+        <dependency>
+            <groupId>com.study.springcloud</groupId>
+            <artifactId>cloud-commons-provider-payment</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--springBoot整合consul客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
