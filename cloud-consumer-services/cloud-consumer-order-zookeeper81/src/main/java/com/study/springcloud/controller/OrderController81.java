@@ -25,7 +25,7 @@ public class OrderController81 {
     private String serverPort;
 
     @GetMapping("/consumer/zookerper")
-    public CommonResult<Payment> query(@PathVariable("id") Long id){
-        return new CommonResult(200,"spring cloud zookerper,port:"+serverPort, UUID.randomUUID().toString());
+    public CommonResult<Payment> zookerper(){
+        return new CommonResult(200,"spring cloud zookerper port:"+serverPort, UUID.randomUUID().toString());
     }
 }
