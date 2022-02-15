@@ -15,8 +15,8 @@
     <modules>
         <module>cloud-eureka-server7001</module>
         <module>cloud-eureka-server7002</module>
-        <module>cloud-zookeeper-dockerserver</module>
-        <module>cloud-consul-dockerserver</module>
+        <module>cloud-zookeeper-docker2181</module>
+        <module>cloud-consul-docker8500</module>
     </modules>
 
 

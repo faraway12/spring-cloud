@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-zookeeper-dockerserver</artifactId>
+    <artifactId>cloud-consul-docker8500</artifactId>
+
 
 </project>
