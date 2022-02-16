@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 /**
- * <p> Title: OrderController81 </p>
+ * <p> Title: OrderController80 </p>
  * <p> Description: </p>
  *
  * @author lijialin
@@ -18,13 +18,13 @@ import java.util.UUID;
  */
 @RestController
 @Slf4j
-public class OrderController81 {
+public class OrderController80 {
 
     @Value("${server.port}")
     private String serverPort;
 
-    @GetMapping("/consumer/zookeeper")
-    public CommonResult<Payment> zookeeper(){
-        return new CommonResult(200,"spring cloud zookeeper port:"+serverPort, UUID.randomUUID().toString());
+    @GetMapping("/consumer/eureka")
+    public CommonResult<Payment> eureka(){
+        return new CommonResult(200,"spring cloud eureka port:"+serverPort, UUID.randomUUID().toString());
     }
 }
