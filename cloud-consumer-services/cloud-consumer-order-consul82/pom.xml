@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-consumer-order-zookeeper81</artifactId>
+    <artifactId>cloud-consumer-order-consul82</artifactId>
 
     <dependencies>
         <!--引入cloud-commons-consumer-order-->
@@ -18,10 +18,10 @@
             <artifactId>cloud-commons-consumer-order</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!--springBoot整合zookeeper客户端-->
+        <!--springBoot整合consul客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.cloud</groupId>
