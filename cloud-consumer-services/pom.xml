@@ -16,7 +16,7 @@
         <module>cloud-consumer-order-eureka80</module>
         <module>cloud-consumer-order-zookeeper81</module>
         <module>cloud-consumer-order-consul82</module>
-        <module>cloud-consumer-order-eureka-ribbon84</module>
+        <module>cloud-consumer-order-eureka-ribbon83</module>
     </modules>
 
 </project>

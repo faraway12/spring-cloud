@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-consumer-order-eureka-ribbon84</artifactId>
+    <artifactId>cloud-consumer-order-eureka-ribbon83</artifactId>
 
     <dependencies>
         <!--引入cloud-commons-consumer-order-->
