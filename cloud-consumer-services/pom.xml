@@ -17,6 +17,7 @@
         <module>cloud-consumer-order-zookeeper81</module>
         <module>cloud-consumer-order-consul82</module>
         <module>cloud-consumer-order-eureka-ribbon83</module>
+        <module>cloud-consumer-order-openFeign84</module>
     </modules>
 
 </project>
