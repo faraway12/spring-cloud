@@ -18,6 +18,7 @@
         <module>cloud-consumer-order-consul82</module>
         <module>cloud-consumer-order-eureka-ribbon83</module>
         <module>cloud-consumer-order-openFeign84</module>
+        <module>cloud-consumer-order-openFeign-hystrix85</module>
     </modules>
 
 </project>

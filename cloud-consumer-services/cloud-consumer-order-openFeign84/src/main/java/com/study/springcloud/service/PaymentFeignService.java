@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 /**
  * <p> Title: PaymentFeignService </p>
  * <p> Description: </p>
- * Feign基础了ribbon和restTemplate
+ *
+ * Feign继承了ribbon和restTemplate
  *
  * @author lijialin
  * @since 2022-03-08

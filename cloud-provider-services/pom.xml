@@ -17,6 +17,7 @@
         <module>cloud-provider-payment-eureka8002</module>
         <module>cloud-provider-payment-zookeeper8003</module>
         <module>cloud-provider-payment-consul8004</module>
+        <module>cloud-provider-payment-hystrix8005</module>
     </modules>
 
 </project>
