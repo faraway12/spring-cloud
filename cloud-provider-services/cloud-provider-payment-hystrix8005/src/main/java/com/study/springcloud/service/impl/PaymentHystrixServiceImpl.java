@@ -22,7 +22,8 @@ public class PaymentHystrixServiceImpl implements PaymentHystrixService {
 
     @Override
     public String paymentInfo_TimeOut(Long id) {
-        int time = 3;
+        //三秒以内，正常；五秒以内，超时；五秒以上，异常。
+        int time = 5;
         try {
             TimeUnit.SECONDS.sleep(time);
         } catch (InterruptedException e) {
