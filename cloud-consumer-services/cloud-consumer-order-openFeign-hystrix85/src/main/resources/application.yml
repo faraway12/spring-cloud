@@ -28,16 +28,16 @@ logging:
     # feign日志以什么级别监控哪个接口
     com.study.springcloud.service.OrderHystrixService: debug
 
+# 此处是一个坑！！
+# 以下两个配置需一起使用，如果feign开启了hystrix的支持，就需要在此配置默认hystrix超时时间
+# 在@HystrixProperty注解中配置的时间才起作用，否则最大超时时间只能为1秒
 feign:
   hystrix:
     enabled: true #开启feign的hystrix支持
-
-# 此处是一个坑！！ feign+hystrix必须在yml中配置默认hystrix超时时间，
-# 在@HystrixProperty注解中配置的时间才起作用，否则最大超时时间只能为1秒
 hystrix:
   command:
     default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 6000
+            timeoutInMilliseconds: 2000
