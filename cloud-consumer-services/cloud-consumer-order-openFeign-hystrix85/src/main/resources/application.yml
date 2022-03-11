@@ -18,11 +18,26 @@ eureka:
       #defaultZone: http://localhost:7001/eureka 单机版
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka #集群 备注：实际上只需要写一个地址就可以，多个集群eureka之间会同步注册服务的信息
 
-#设置超时
+#--------------Feign负载均衡配置 配置全局超时时间
 ribbon:
-  ReadTimeout: 5000
-  ConnectTimeout: 5000
+  ConnectTimeout: 5000 #请求连接的超时时间，默认时间为1秒
+  ReadTimeout: 5000 #请求处理的超时时间
+
 logging:
   level:
     # feign日志以什么级别监控哪个接口
     com.study.springcloud.service.OrderHystrixService: debug
+
+feign:
+  hystrix:
+    enabled: true #开启feign的hystrix支持
+
+# 此处是一个坑！！ feign+hystrix必须在yml中配置默认hystrix超时时间，
+# 在@HystrixProperty注解中配置的时间才起作用，否则最大超时时间只能为1秒
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
