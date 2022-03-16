@@ -19,6 +19,7 @@
         <module>cloud-consumer-order-eureka-ribbon83</module>
         <module>cloud-consumer-order-openFeign84</module>
         <module>cloud-consumer-order-openFeign-hystrix85</module>
+        <module>cloud-provider-payment-hystrix-dashborad9001</module>
     </modules>
 
 </project>
