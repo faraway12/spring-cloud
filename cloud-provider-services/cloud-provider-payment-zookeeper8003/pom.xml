@@ -12,12 +12,6 @@
     <artifactId>cloud-provider-payment-zookeeper8003</artifactId>
 
     <dependencies>
-        <!--引入cloud-commons-provider-payment-->
-        <dependency>
-            <groupId>com.study.springcloud</groupId>
-            <artifactId>cloud-commons-provider-payment</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <!--springBoot整合zookeeper客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

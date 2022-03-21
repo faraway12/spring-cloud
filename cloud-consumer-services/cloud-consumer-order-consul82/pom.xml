@@ -12,12 +12,6 @@
     <artifactId>cloud-consumer-order-consul82</artifactId>
 
     <dependencies>
-        <!--引入cloud-commons-consumer-order-->
-        <dependency>
-            <groupId>com.study.springcloud</groupId>
-            <artifactId>cloud-commons-consumer-order</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <!--springBoot整合consul客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

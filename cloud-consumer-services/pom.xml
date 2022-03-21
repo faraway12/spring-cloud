@@ -22,4 +22,13 @@
         <module>cloud-provider-payment-hystrix-dashborad9001</module>
     </modules>
 
+    <dependencies>
+        <!--引入cloud-commons-consumer-order-->
+        <dependency>
+            <groupId>com.study.springcloud</groupId>
+            <artifactId>cloud-commons-consumer-order</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>

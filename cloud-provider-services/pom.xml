@@ -20,4 +20,13 @@
         <module>cloud-provider-payment-hystrix8005</module>
     </modules>
 
+    <dependencies>
+        <!--引入cloud-commons-provider-payment-->
+        <dependency>
+            <groupId>com.study.springcloud</groupId>
+            <artifactId>cloud-commons-provider-payment</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>

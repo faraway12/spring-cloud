@@ -12,12 +12,6 @@
     <artifactId>cloud-consumer-order-eureka80</artifactId>
 
     <dependencies>
-        <!--引入cloud-commons-consumer-order-->
-        <dependency>
-            <groupId>com.study.springcloud</groupId>
-            <artifactId>cloud-commons-consumer-order</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <!--eureka-client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

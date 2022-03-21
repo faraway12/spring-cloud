@@ -12,12 +12,6 @@
     <artifactId>cloud-provider-payment-hystrix8005</artifactId>
 
     <dependencies>
-        <!--引入cloud-commons-provider-payment-->
-        <dependency>
-            <groupId>com.study.springcloud</groupId>
-            <artifactId>cloud-commons-provider-payment</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <!--eureka-client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
