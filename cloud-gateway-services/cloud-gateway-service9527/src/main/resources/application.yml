@@ -34,6 +34,16 @@ spring:
           uri: lb://cloud-payment-service
           predicates:
             - Path=/payment/lb/**
+#            - After=2022-03-21T22:06:08.878+08:00[Asia/Shanghai]
+#            - Before=2022-03-21T22:12:08.878+08:00[Asia/Shanghai]
+#            - Between=2022-03-21T22:06:08.878+08:00[Asia/Shanghai],2022-03-21T22:12:08.878+08:00[Asia/Shanghai]
+#            - Cookie=username,ljl     #curl http://localhost:9527/payment/lb --cookie "username=ljl"
+#            - Header=X-Request-Id,\d+     #curl http://localhost:9527/payment/lb -H "X-Request-Id:123"
+#            - Host      #curl http://localhost:9527/payment/lb -H "Host:com.study.springcloud"
+#            - Method=GET,POST
+#            - Query=userId,\d+      #curl http://localhost:9527/payment/lb\?userId\=22
+          filters:
+            - AddRequestHeader=X-Request-Id,11 #过滤器工厂会在匹配的请求的头加上一对名为X-Request-Id值为11的键值对
 
 eureka:
   instance:
