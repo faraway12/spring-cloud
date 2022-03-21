@@ -17,6 +17,7 @@
     <module>cloud-consumer-services</module>
     <module>cloud-commons-consumer-order</module>
     <module>cloud-gateway-services</module>
+      <module>cloud-config-services</module>
   </modules>
 
   <!--统一管理jar包版本-->
