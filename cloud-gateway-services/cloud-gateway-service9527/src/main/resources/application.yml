@@ -1,17 +1,37 @@
 server:
   port: 9527
+
+# 单机版本(写死url)
+#spring:
+#  application:
+#    name: cloud-gateway
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: payment_route
+#          uri: http://localhost:8001
+#          predicates:
+#            - Path=/payment/queryById/**
+#        - id: payment_route2
+#          uri: http://localhost:8001
+#          predicates:
+#            - Path=/payment/lb/**
+
 spring:
   application:
     name: cloud-gateway
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: false #开启从注册中心动态创建路由的功能，利用微服务明就行路由
       routes:
         - id: payment_route
-          uri: http://localhost:8001
+          uri: lb://cloud-payment-service
           predicates:
             - Path=/payment/queryById/**
         - id: payment_route2
-          uri: http://localhost:8001
+          uri: lb://cloud-payment-service
           predicates:
             - Path=/payment/lb/**
 
