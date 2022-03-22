@@ -10,6 +10,14 @@ spring:
       profile: dev
       uri: http://config3344.com:3344
 
+#增加此配置，暴露监控端点，另外在controller层增加@RefreshScope注解，实现动态刷新
+#每次修改完成后发送POST进行刷新，curl -X POST "http://localhost:3355/actuator/refresh"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 eureka:
   instance:
     instance-id: spring-cloud-config3355 #指定服务名称
