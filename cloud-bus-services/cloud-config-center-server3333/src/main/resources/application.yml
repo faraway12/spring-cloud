@@ -1,0 +1,29 @@
+server:
+  port: 3333
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/farawy_1/springcloud-config.git
+          search-paths:
+            - springcloud-config
+      label: master
+    #/{label}/{application}-{profile}.yml     http://config3333.com:3333/master/config-dev.yml  推荐使用
+    #/{application}-{profile}.yml             http://config3333.com:3333/config-dev.yml
+    #/{application}/{profile}/{label}         http://config3333.com:3333/config/dev/master
+
+eureka:
+  instance:
+    instance-id: spring-cloud-config3333 #指定服务名称
+    prefer-ip-address: true #显示ip
+  client:
+    #true 表示是否注册到注册中心 默认为true
+    register-with-eureka: true
+    #true 表示是否从eurekaServer抓取已有的服务信息 默认为true，单点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka

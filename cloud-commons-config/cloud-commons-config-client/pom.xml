@@ -3,30 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>cloud-provider-services</artifactId>
+        <artifactId>cloud-commons-config</artifactId>
         <groupId>com.study.springcloud</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-provider-payment-config3355</artifactId>
+    <artifactId>cloud-commons-config-client</artifactId>
 
     <dependencies>
+        <!--引入cloud-commons-provider-payment-->
         <dependency>
             <groupId>com.study.springcloud</groupId>
-            <artifactId>cloud-commons-config-client</artifactId>
+            <artifactId>cloud-commons-provider-payment</artifactId>
             <version>${project.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.study.springcloud</groupId>
-                    <artifactId>cloud-commons-provider-payment</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
-        <!--eureka-client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
     </dependencies>
 
