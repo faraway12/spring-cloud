@@ -18,6 +18,7 @@
         <module>cloud-provider-payment-zookeeper8003</module>
         <module>cloud-provider-payment-consul8004</module>
         <module>cloud-provider-payment-hystrix8005</module>
+        <module>cloud-provider-payment-config3355</module>
     </modules>
 
     <dependencies>

@@ -12,8 +12,9 @@ spring:
           search-paths:
             - springcloud-config
       label: master
-    #/{label}/{application}-{profile}.yml     127.0.0.1:3344/master/config-dev.yml
-    #/{application}/{profile}/{label}     127.0.0.1:3344/config/dev/master
+    #/{label}/{application}-{profile}.yml     http://config3344.com:3344/master/config-dev.yml  推荐使用
+    #/{application}-{profile}.yml             http://config3344.com:3344/config-dev.yml
+    #/{application}/{profile}/{label}         http://config3344.com:3344/config/dev/master
 
 eureka:
   instance:

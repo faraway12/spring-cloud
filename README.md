@@ -25,6 +25,9 @@ springboot、springcloud
     127.0.0.1 consul1.com
     127.0.0.1 consul2.com
     127.0.0.1 consul3.com
+
+    # Spring-cloud-config
+    127.0.0.1 config3344.com
 ````
 
 2.  xxxx
