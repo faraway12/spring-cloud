@@ -15,6 +15,18 @@ spring:
     #/{label}/{application}-{profile}.yml     http://config3333.com:3333/master/config-dev.yml  推荐使用
     #/{application}-{profile}.yml             http://config3333.com:3333/config-dev.yml
     #/{application}/{profile}/{label}         http://config3333.com:3333/config/dev/master
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+#rabbitmq相关配置，暴露bus刷新配置的端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
 
 eureka:
   instance:

@@ -9,6 +9,11 @@ spring:
       name: config
       profile: dev
       uri: http://config3333.com:3333
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 #增加此配置，暴露监控端点，另外在controller层增加@RefreshScope注解，实现动态刷新
 #每次修改完成后发送POST进行刷新，curl -X POST "http://localhost:3377/actuator/refresh"
