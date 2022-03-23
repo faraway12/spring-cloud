@@ -22,6 +22,9 @@ spring:
     password: guest
 
 #rabbitmq相关配置，暴露bus刷新配置的端点
+#每次修改完成后发送POST进行刷新配置中心服务端,然后通知到所有配置中心客户端，curl -X POST "http://localhost:3333/actuator/bus-refresh"
+#修改完成后发送POST进行刷新配置中心服务端,指定通知某个客户端，curl -X POST "http://localhost:3333/actuator/bus-refresh/{destination}"
+#注：{destination}为目标微服务(application)的名称+端口号
 management:
   endpoints:
     web:
