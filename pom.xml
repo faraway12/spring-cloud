@@ -20,6 +20,7 @@
     <module>cloud-config-center-services</module>
     <module>cloud-bus-services</module>
     <module>cloud-commons-config</module>
+    <module>cloud-stream-rabbitmq-services</module>
   </modules>
 
   <!--统一管理jar包版本-->

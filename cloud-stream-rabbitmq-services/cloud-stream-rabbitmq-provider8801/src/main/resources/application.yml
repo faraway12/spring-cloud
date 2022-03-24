@@ -1,0 +1,33 @@
+server:
+  port: 8801
+
+spring:
+  application:
+    name: cloud-stream-rabbitmq-provider
+  cloud:
+    stream:
+      binders: #配置要绑定的rabbitmq的服务信息
+        test: #标识定义的名称，用于binding整合
+          type: rabbit #消息组件类型
+          environment: #设置rabbitmq的相关环境配置
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+      bindings: #服务的整合处理
+        testoutput: #定义一个通道的名称
+          destination: testExchange #表示要使用的Exchange名称
+          content-type: application/json #设置消息类型，本次为json，文本则设置"text/plain"
+          default-binder: test #设置要绑定的binder
+
+eureka:
+  instance:
+    instance-id: cloud-stream-rabbitmq-provider8801 #指定服务名称
+    prefer-ip-address: true #显示ip
+  client:
+    register-with-eureka: true #true 表示是否注册到注册中心 默认为true
+    fetch-registry: true #true 表示是否从eurekaServer抓取已有的服务信息 默认为true，单点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
