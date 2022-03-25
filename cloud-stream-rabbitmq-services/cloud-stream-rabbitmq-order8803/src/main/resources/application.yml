@@ -1,5 +1,5 @@
 server:
-  port: 8802
+  port: 8803
 
 spring:
   application:
@@ -25,7 +25,7 @@ spring:
 
 eureka:
   instance:
-    instance-id: cloud-stream-rabbitmq-order8802 #指定服务名称
+    instance-id: cloud-stream-rabbitmq-order8803 #指定服务名称
     prefer-ip-address: true #显示ip
   client:
     register-with-eureka: true #true 表示是否注册到注册中心 默认为true
