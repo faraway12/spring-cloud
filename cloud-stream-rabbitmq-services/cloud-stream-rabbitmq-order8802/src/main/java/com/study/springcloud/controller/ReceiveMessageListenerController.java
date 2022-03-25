@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-@EnableBinding(Sink.class)
+@EnableBinding(Sink.class) //Sink.class会注入指定名为input的通道 我们可以参考这个接口进行自定义
 public class ReceiveMessageListenerController {
     @Value("${server.port}")
     private String serverPort;

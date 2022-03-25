@@ -7,7 +7,7 @@ spring:
   cloud:
     stream:
       binders: #配置要绑定的rabbitmq的服务信息
-        test: #标识定义的名称，用于binding整合
+        myRabbitmq: #标识定义的名称，用于binding整合
           type: rabbit #消息组件类型
           environment: #设置rabbitmq的相关环境配置
             spring:
@@ -17,10 +17,10 @@ spring:
                 username: guest
                 password: guest
       bindings: #服务的整合处理
-        testoutput: #定义一个通道的名称
+        output: #定义一个通道的名称 对应@Output注解中的值
           destination: testExchange #表示要使用的Exchange名称
           content-type: application/json #设置消息类型，本次为json，文本则设置"text/plain"
-          default-binder: test #设置要绑定的binder
+          default-binder: myRabbitmq #设置要绑定的binder
 
 eureka:
   instance:
