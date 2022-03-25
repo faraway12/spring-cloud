@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>cloud-stream-rabbitmq-provider8801</module>
+        <module>cloud-stream-rabbitmq-order8802</module>
     </modules>
 
     <dependencies>
