@@ -21,7 +21,7 @@ spring:
           destination: testExchange #表示要使用的Exchange名称
           content-type: application/json #设置消息类型，本次为json，文本则设置"text/plain"
           default-binder: myRabbitmq #设置要绑定的binder
-          group: orderA
+          group: orderA #微服务集群应用放置于同一个group中，能够保证消息只会被其中一个应用消费一次;不同的组是可以多次消费的(topic模式);group实现了消息持久化
 
 eureka:
   instance:
