@@ -1,5 +1,5 @@
 server:
-  port: 9527
+  port: 9528
 
 # 单机版本(写死url)
 #spring:
@@ -27,31 +27,13 @@ spring:
           enabled: false #开启从注册中心动态创建路由的功能，利用微服务明就行路由
       routes:
         - id: consumer_route
-          uri: lb://cloud-consumer-order
+          uri: lb://cloud-consumer-order-sleuth-zipkin
           predicates:
-            - Path=/consumer/payment/query/**
-        - id: payment_route
-          uri: lb://cloud-payment-service
-          predicates:
-            - Path=/payment/queryById/**
-        - id: payment_route2
-          uri: lb://cloud-payment-service
-          predicates:
-            - Path=/payment/lb/**
-#            - After=2022-03-21T22:06:08.878+08:00[Asia/Shanghai]
-#            - Before=2022-03-21T22:12:08.878+08:00[Asia/Shanghai]
-#            - Between=2022-03-21T22:06:08.878+08:00[Asia/Shanghai],2022-03-21T22:12:08.878+08:00[Asia/Shanghai]
-#            - Cookie=username,ljl     #curl http://localhost:9527/payment/lb --cookie "username=ljl"
-#            - Header=X-Request-Id,\d+     #curl http://localhost:9527/payment/lb -H "X-Request-Id:123"
-#            - Host      #curl http://localhost:9527/payment/lb -H "Host:com.study.springcloud"
-#            - Method=GET,POST
-#            - Query=userId,\d+      #curl http://localhost:9527/payment/lb\?userId\=22
-          filters:
-            - AddRequestHeader=X-Request-Id,11 #过滤器工厂会在匹配的请求的头加上一对名为X-Request-Id值为11的键值对
+            - Path=/sleuth-zipkin/consumer/payment/query/**
 
 eureka:
   instance:
-    instance-id: cloud-gateway-service9527 #指定服务名称
+    instance-id: cloud-gateway-service9528 #指定服务名称
     prefer-ip-address: true #显示ip
   client:
     #true 表示是否注册到注册中心 默认为true
