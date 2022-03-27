@@ -11,4 +11,12 @@
 
     <artifactId>cloud-config-center-server3344</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.study.springcloud</groupId>
+            <artifactId>cloud-commons-config-server</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>

@@ -18,11 +18,6 @@
     </modules>
 
     <dependencies>
-        <dependency>
-            <groupId>com.study.springcloud</groupId>
-            <artifactId>cloud-commons-config-server</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <!--eureka-client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

@@ -16,17 +16,6 @@
             <groupId>com.study.springcloud</groupId>
             <artifactId>cloud-commons-config-client</artifactId>
             <version>${project.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.study.springcloud</groupId>
-                    <artifactId>cloud-commons-provider-payment</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!--eureka-client-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
 
