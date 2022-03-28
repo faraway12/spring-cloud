@@ -22,6 +22,7 @@
     <module>cloud-commons-config</module>
     <module>cloud-stream-rabbitmq-services</module>
     <module>cloud-sleuth-zipkin-services</module>
+      <module>spring-cloud-alibaba</module>
   </modules>
 
   <!--统一管理jar包版本-->
