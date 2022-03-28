@@ -17,6 +17,14 @@
         <module>cloud-consumer-order-eureka86</module>
         <module>cloud-provider-payment-eureka8006</module>
         <module>cloud-provider-payment-eureka8007</module>
+        <module>cloud-zipkin-docker9411</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

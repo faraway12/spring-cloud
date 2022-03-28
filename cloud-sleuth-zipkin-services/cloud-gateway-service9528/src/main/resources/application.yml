@@ -30,6 +30,11 @@ spring:
           uri: lb://cloud-consumer-order-sleuth-zipkin
           predicates:
             - Path=/sleuth-zipkin/consumer/payment/query/**
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1 #采样率值介于0到1之间，1则表示全部采集
 
 eureka:
   instance:
