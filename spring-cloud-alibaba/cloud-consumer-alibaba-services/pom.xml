@@ -9,19 +9,24 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-provider-alibaba-services</artifactId>
+    <artifactId>cloud-consumer-alibaba-services</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>cloud-provider-payment-nacos6001</module>
-        <module>cloud-provider-payment-nacos6002</module>
+        <module>cloud-consumer-order-nacos60</module>
     </modules>
 
     <dependencies>
-        <!--引入cloud-commons-provider-payment-->
+        <!--引入cloud-commons-consumer-order-->
         <dependency>
             <groupId>com.study.springcloud</groupId>
-            <artifactId>cloud-commons-provider-payment</artifactId>
+            <artifactId>cloud-commons-consumer-order</artifactId>
             <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

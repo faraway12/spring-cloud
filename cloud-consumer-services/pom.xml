@@ -28,6 +28,12 @@
             <groupId>com.study.springcloud</groupId>
             <artifactId>cloud-commons-consumer-order</artifactId>
             <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
