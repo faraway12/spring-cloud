@@ -1,0 +1,21 @@
+server:
+  port: 3388
+
+spring:
+  application:
+    name: nacos-config-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #配置nacos注册中心地址
+      config:
+        server-addr: localhost:8848 #配置nacos配置中心地址
+        file-extension: yml #指定配置文件格式
+##增加此配置，暴露监控端点，另外在controller层增加@RefreshScope注解，实现动态刷新
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+# ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+#-> nacos-config-client-dev.yml 作为dataId
