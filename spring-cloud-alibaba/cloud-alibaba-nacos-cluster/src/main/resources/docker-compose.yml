@@ -12,7 +12,7 @@ services:
       - ./mysql/data:/var/lib/mysql
     restart: on-failure
     ports:
-      - 3309:3306
+      - 3307:3306
     privileged: true
     stdin_open: true
     tty: true
