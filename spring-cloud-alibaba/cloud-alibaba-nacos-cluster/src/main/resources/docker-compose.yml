@@ -14,7 +14,7 @@ services:
       - ./nacos-mysql.sql:/var/nacos-mysql.sql
     restart: on-failure
     ports:
-      - 3306:3306
+      - 3307:3306 #修改为3307，避免与本地mysql端口冲突，后面nacos配置使用真实的容器里的mysql端口，即3306，通过docker网络连接
     privileged: true
     stdin_open: true
     tty: true
