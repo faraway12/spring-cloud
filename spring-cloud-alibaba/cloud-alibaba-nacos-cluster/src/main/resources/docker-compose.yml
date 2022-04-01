@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  mysql:
+    container_name: MySQL5.7.33
+    image: mysql:5.7.33
+    environment:
+      - MYSQL_ROOT_PASSWORD=ok
+    volumes:
+      - ./mysql/conf:/etc/mysql
+      - ./mysql/logs:/var/log/mysql
+      - ./mysql/data:/var/lib/mysql
+    restart: on-failure
+    ports:
+      - 3309:3306
+    privileged: true
+    stdin_open: true
+    tty: true

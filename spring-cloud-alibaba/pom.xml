@@ -16,6 +16,7 @@
         <module>cloud-provider-alibaba-services</module>
         <module>cloud-consumer-alibaba-services</module>
         <module>cloud-alibaba-config-services</module>
+        <module>cloud-alibaba-nacos-cluster</module>
     </modules>
 
 
