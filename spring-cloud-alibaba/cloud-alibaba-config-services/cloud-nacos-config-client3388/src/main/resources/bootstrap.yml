@@ -7,12 +7,14 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848 #配置nacos注册中心地址
+        #server-addr: localhost:8848 #配置nacos注册中心地址 单机
+        server-addr: localhost:8845 #配置nacos注册中心地址 集群
       config:
-        server-addr: localhost:8848 #配置nacos配置中心地址
+        #server-addr: localhost:8848 #配置nacos配置中心地址 单机
+        server-addr: localhost:8845 #配置nacos配置中心地址 集群
         file-extension: yml #指定配置文件格式
         group: DEV_GROUP #默认为DEFAULT_GROUP
-        namespace: 6a797c02-55f4-4b57-bfbd-315bbc546833 #默认为pubilc
+        namespace: dev #默认为pubilc
 
 # ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
 #-> nacos-config-client-dev.yml 作为dataId
