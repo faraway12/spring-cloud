@@ -101,6 +101,18 @@ services:
     networks:
       - nacos-net-yes
 
+  nacos-nginx:
+    container_name: nacos-nginx
+    image: nginx:latest
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/nacos-nginx/www:/usr/share/nginx/
+    ports:
+      - 8845:80
+    restart: on-failure
+    networks:
+      - nacos-net-yes
+
 networks:
   nacos-net-yes:
     driver: bridge
