@@ -36,9 +36,9 @@ services:
       - MYSQL_SERVICE_USER=root
       - MYSQL_SERVICE_PASSWORD=123456
       - MYSQL_SERVICE_DB_NAME=nacosdb
-      - JVM_XMS=128m
-      - JVM_XMX=128m
-      - JVM_XMN=128m
+      - JVM_XMS=256m
+      - JVM_XMX=256m
+      - JVM_XMN=256m
     volumes:
       - ./nacos/cluster-logs/nacos-server01:/home/nacos/logs
       - ./nacos/init.d:/home/nacos/init.d
@@ -63,9 +63,9 @@ services:
       - MYSQL_SERVICE_USER=root
       - MYSQL_SERVICE_PASSWORD=123456
       - MYSQL_SERVICE_DB_NAME=nacosdb
-      - JVM_XMS=128m
-      - JVM_XMX=128m
-      - JVM_XMN=128m
+      - JVM_XMS=256m
+      - JVM_XMX=256m
+      - JVM_XMN=256m
     volumes:
       - ./nacos/cluster-logs/nacos-server02:/home/nacos/logs
       - ./nacos/init.d:/home/nacos/init.d
@@ -89,9 +89,9 @@ services:
       - MYSQL_SERVICE_USER=root
       - MYSQL_SERVICE_PASSWORD=123456
       - MYSQL_SERVICE_DB_NAME=nacosdb
-      - JVM_XMS=128m
-      - JVM_XMX=128m
-      - JVM_XMN=128m
+      - JVM_XMS=256m
+      - JVM_XMX=256m
+      - JVM_XMN=256m
     volumes:
       - ./nacos/cluster-logs/nacos-server03:/home/nacos/logs
       - ./nacos/init.d:/home/nacos/init.d
