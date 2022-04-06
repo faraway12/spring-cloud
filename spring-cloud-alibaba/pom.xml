@@ -17,6 +17,7 @@
         <module>cloud-consumer-alibaba-services</module>
         <module>cloud-alibaba-config-services</module>
         <module>cloud-alibaba-nacos-cluster</module>
+        <module>cloud-alibaba-sentinel-docker8858</module>
     </modules>
 
 
