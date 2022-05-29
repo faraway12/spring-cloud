@@ -9,3 +9,4 @@
 .flattened-pom.xml
 /.metadata/
 target/
+*.DS_Store

@@ -1,0 +1,24 @@
+server:
+  port: 86
+
+spring:
+  application:
+    name: cloud-consumer-order-sleuth-zipkin
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1 #采样率值介于0到1之间，1则表示全部采集
+
+eureka:
+  instance:
+    instance-id: consumer-order86 #指定服务名称
+    prefer-ip-address: true #显示ip
+  client:
+    #true 表示是否注册到注册中心 默认为true
+    register-with-eureka: true
+    #true 表示是否从eurekaServer抓取已有的服务信息 默认为true，单点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
+    fetch-registry: true
+    service-url:
+      #defaultZone: http://localhost:7001/eureka 单机版
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka #集群 备注：实际上只需要写一个地址就可以，多个集群eureka之间会同步注册服务的信息

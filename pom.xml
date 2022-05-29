@@ -10,12 +10,19 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>cloud-provider-payment8001</module>
-    <module>cloud-consumer-order80</module>
     <module>cloud-commons-api</module>
-    <module>cloud-eureka-server7001</module>
-    <module>cloud-eureka-server7002</module>
-    <module>cloud-provider-payment8002</module>
+    <module>cloud-commons-provider-payment</module>
+    <module>cloud-discovery-services</module>
+    <module>cloud-provider-services</module>
+    <module>cloud-consumer-services</module>
+    <module>cloud-commons-consumer-order</module>
+    <module>cloud-gateway-services</module>
+    <module>cloud-config-center-services</module>
+    <module>cloud-bus-services</module>
+    <module>cloud-commons-config</module>
+    <module>cloud-stream-rabbitmq-services</module>
+    <module>cloud-sleuth-zipkin-services</module>
+      <module>spring-cloud-alibaba</module>
   </modules>
 
   <!--统一管理jar包版本-->
@@ -28,6 +35,7 @@
     <lombok.version>1.16.18</lombok.version>
     <mysql.version>5.1.47</mysql.version>
     <druid.version>1.1.16</druid.version>
+    <fastjson.version>1.2.74</fastjson.version>
     <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
   </properties>
 
@@ -84,6 +92,11 @@
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
         <version>${lombok.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fastjson.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
